@@ -5,10 +5,9 @@ const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
 
 yesBtn.addEventListener("click", () => {
+  document.body.style.backgroundColor = "white"; // Change background color to white
   question.innerHTML = "ok";
   gif.src = "https://media1.tenor.com/m/BBp2XL-y8dIAAAAC/kuromi.gif";
-  
-  document.body.style.backgroundColor = "white"; // Change background color to white
     
   yesBtn.style.display = 'none';
   noBtn.style.display = 'none';
@@ -27,7 +26,7 @@ noBtn.addEventListener("click", () => {
     setTimeout(() => {
       noBtn.textContent = "no"; // Immediately reset the button text to "no" after showing the second message
       secondClick = false; // Prevent further changes to the text
-    }, 500); // Change back to "no" after 0.5 seconds
+    }, 1000); // Change back to "no" after 1 seconds
   } else {
     moveButton(); // If neither firstClick nor secondClick, just move the button
   }
